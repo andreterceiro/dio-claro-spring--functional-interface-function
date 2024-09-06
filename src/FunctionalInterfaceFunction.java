@@ -62,4 +62,18 @@ public class FunctionalInterfaceFunction {
         numerosDobrados.forEach(System.out::println);
     }
 
+    public static void forma4() {
+        List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5);
+
+        List<Integer> numerosDobrados = numeros
+            .stream()
+            .map(n -> n * 2)
+            .collect(Collectors.toList()); /* direct .toList() in Java 16+ */
+
+        System.out.println(numerosDobrados);
+
+        // Another way of printing, this time every value instead the whole list
+        numerosDobrados.forEach(System.out::println);
+    }
+
 }
