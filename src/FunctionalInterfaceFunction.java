@@ -12,7 +12,7 @@ public class FunctionalInterfaceFunction {
         List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5);
         Function<Integer, Integer> dobrar = numero -> numero * 2;
 
-        List numerosDobrados = numeros
+        List<Integer> numerosDobrados = numeros
             .stream()
             .map(dobrar)
             .collect(Collectors.toList());
