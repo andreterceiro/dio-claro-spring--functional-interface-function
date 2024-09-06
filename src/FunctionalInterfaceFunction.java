@@ -10,9 +10,9 @@ public class FunctionalInterfaceFunction {
 
     public static void forma1() {
         List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5);
-        Function<Integer, Integer> dobrar = numero -> numero * 2;
+        Function<Integer, Double> dobrar = numero -> numero * 2.0;
 
-        List<Integer> numerosDobrados = numeros
+        List<Double> numerosDobrados = numeros
             .stream()
             .map(dobrar)
             .collect(Collectors.toList());
