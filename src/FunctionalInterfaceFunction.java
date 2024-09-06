@@ -18,5 +18,9 @@ public class FunctionalInterfaceFunction {
             .collect(Collectors.toList());
 
         System.out.println(numerosDobrados);
+        
+        // Another way of printing, this time every value instead the whole list
+        numerosDobrados.forEach(numero -> System.out.println(numero));
+
     }
 }
