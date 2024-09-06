@@ -4,8 +4,16 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class FunctionalInterfaceFunction {
+    /**
+     * List of the numbers to be mapped to other numbers in the methods
+     */
     static List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5);
 
+    /**
+     * Main method to allow us execute manual tests in the CLI
+     * @param args CLI arguments (ignored)
+     * @throws Exception
+     */
     public static void main(String[] args) throws Exception {
         FunctionalInterfaceFunction.forma1();
         System.out.println("----------------------");
@@ -14,6 +22,9 @@ public class FunctionalInterfaceFunction {
         FunctionalInterfaceFunction.forma3();
     }
 
+    /**
+     * Way 1 to use functional interface function
+     */
     public static void forma1() {
         Function<Integer, Double> dobrar = numero -> numero * 2.0;
 
@@ -29,6 +40,9 @@ public class FunctionalInterfaceFunction {
 
     }
 
+    /**
+     * Way 2 to use functional interface function
+     */
     public static void forma2() {
         Function<Integer, Double> dobrar = numero -> numero * 2.0;
 
@@ -43,6 +57,9 @@ public class FunctionalInterfaceFunction {
         numerosDobrados.forEach(System.out::println);
     }
 
+    /**
+     * Way 3 to use functional interface function
+     */
     public static void forma3() {
         List<Integer> numerosDobrados = FunctionalInterfaceFunction.numeros
             .stream()
@@ -60,6 +77,9 @@ public class FunctionalInterfaceFunction {
         numerosDobrados.forEach(System.out::println);
     }
 
+    /**
+     * Way 4 to use functional interface function
+     */
     public static void forma4() {
         List<Integer> numerosDobrados = FunctionalInterfaceFunction.numeros
             .stream()
@@ -71,5 +91,4 @@ public class FunctionalInterfaceFunction {
         // Another way of printing, this time every value instead the whole list
         numerosDobrados.forEach(System.out::println);
     }
-
 }
